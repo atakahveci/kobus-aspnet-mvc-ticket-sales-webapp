@@ -1,0 +1,238 @@
+﻿@using Kobus.Entity;
+@using Kobus.Substructure;
+@using Kobus.Globals;
+@{
+    ViewBag.Title = "Sefer";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="normaltext">
+    <div class="hakdiv"
+         id="divhak"
+         style="display: block; margin: 0 auto; margin-top:15px; margin-bottom: 160px;">
+
+        <center>
+            <div class="CardDiv">
+                <div class="GreenTitleDiv">
+                    <h3 style=" float:left; margin-top: 1px; margin-left: 8px; padding-left: 6px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Sefer islemleri &#10142; Sefer Ekleme</h3>
+                </div>
+                <div style="padding:15px 16px 15px 16px; height:auto; ">
+                    <p style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:15px; color:#717171; text-align:left;">
+                        Sefer ekleme işleminde yapmanız gereken Sefer No, Güzergah, Tarih, Saat, Yolcu kapasitesi, Plaka, Kaptan, ve Bilet fiyatı  gibi bilgileri gerekli alanlara giriniz.
+                    </p> <br />
+                    <button type="button" class="btn btn-primary" style="float:right; font-family:'Segoe UI'; padding:4px 14px 4px 14px; font-size:14px; font-weight:500;  " data-toggle="modal" data-target="#cart">Ekle</button>
+                    <p style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:15px; color:#717171; text-align:left;">
+                        Ekle butonuna basarak ekleme işleminizi açılacak olan modal pencereden yapabilirsiniz.
+                    </p>
+                    <br />
+                </div>
+            </div>
+        </center>
+
+
+        <center>
+            <div class="CardDiv">
+                <div class="GreenTitleDiv">
+                    <h3 style=" float:left; margin-top: 1px; margin-left: 8px; padding-left: 6px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Sefer islemleri &#10142; Sefer Listeleme: Sefer Silme & Düzenleme</h3>
+                </div>
+
+
+                <div class="row offset-2 custyle" style="padding:5px; margin:10px 10px 10px 0px; ">
+                    <table class="table table-striped custab" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:14px;  ">
+                        @{Entity entity = new Entity();
+                            DoubleDirectionalList Voyage = entity.VoyageList(0);
+                            Node temp = Voyage.top;
+
+                            <thead style="padding-left:90px; padding-right:90px; ">
+                                <tr style="padding-left:90px; padding-right:90px; ">
+                                    @while (temp != null)
+                                    {
+                                        <th>@temp.Data</th>
+                                        temp = temp.Next;
+                                    }
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+
+
+                            for (int i = 1; i < Convert.ToInt32(Globals.Length); i++)
+                            {
+
+                                if (Globals.filecontrol[i] == "Active")
+                                {
+                                    Voyage = entity.VoyageList(i);
+                                    <tr>
+                                        @for (int j = 0; j < Voyage.Count(); j++)
+                                        {
+                                            <td>@Voyage.Data(j)</td>
+                                        }
+                                        <td>@Convert.ToInt32(entity.VoyageTotalBudget(@i) * Convert.ToInt32(Voyage.Data(5)))<span class="simge-tl">&#8378;</span> </td>
+                                        <td>@Voyage.Data(4) / @entity.VoyageTotalBudget(@i)</td>
+                                        <td class="text-center" style="float:right;">
+                                            <a class="btn btn-success" style="font-size:14px;" onclick="Edit(@i)" data-toggle="modal" data-target="#cart"><span class="glyphicon glyphicon-edit"></span>Düzenle</a>
+                                            <a class="btn btn-danger" style="font-size:14px;" onclick="Delete(@i)"><span class="glyphicon glyphicon-remove"></span>Sil</a>
+                                        </td>
+                                    </tr>
+                                }
+
+                            }
+                        }
+                    </table>
+                </div>
+
+                <br />
+
+                <a class='btn btn-warning' style="padding:4px 14px 4px 14px; color:white; font-family:'Segoe UI'; font-size:14px; font-weight:500; margin-bottom:30px; margin-right:10px" href="/Kobus/DeletedVoyageList">Silinen Seferler</a>
+                <a class='btn btn-warning' style="padding:4px 14px 4px 14px; color:white; font-family:'Segoe UI'; font-size:14px; font-weight:500; margin-bottom:30px;" href="/Kobus/HistoryVoyageList">Geçmiş Seferler</a>
+                <a class='btn btn-warning' style="padding:4px 14px 4px 14px; color:white; font-family:'Segoe UI'; font-size:14px; font-weight:500; margin-bottom:30px;" href="/Kobus/AllVoyageList">Tüm Seferler</a>
+                <br />
+            </div>
+        </center>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="width:300px;font-size:18px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:#5CD375 ;">Sefer Ekleme</h5>
+
+                    <div style="color:#4A4A4A; width:1000px; padding:20px 110px 10px 5px;font-size:17px; ">
+                        <p style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:15px; color:#717171; text-align:left;">
+                            Eklemiş olduğunuz Sefer'i sefer listesinde bulabilirsiniz. Ve değişiklik veya silme işlemini de durumuna göre gerçekleştirebilirsiniz.
+                        </p>
+                        <div class="form-group">
+                            <input class="inputtt" required="required" placeholder="Güzargah Örn: Kocaeli->İstanbul" type="text" id="Guzergah" name="Guzergah" />
+                        </div>
+
+                        <div class="form-group">
+                            <input class="inputtt" required="required" placeholder="Tarih Örn: 27/03/2020 CUMA" type="date" id="Tarih" name="Tarih" />
+                        </div>
+
+                        <div class="form-group">
+                            <input class="inputtt" required="required" placeholder="Saat Örn: 17:00" type="datetime" id="Saat" name="Saat" />
+                        </div>
+
+                        <div class="form-group">
+                            <select class="inputtt" required id="Kapasite" name="Kapasite">
+                                <option value="">Yolcu Sayısı(Kapasite)</option>
+                                <option value="32">32</option>
+                                <option value="36">36</option>
+                                <option value="40">40</option>
+                                <option value="44">44</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <input class="inputtt" required="required" placeholder="Plaka Örn: 58 1907FB" type="text" id="Plaka" name="Plaka" />
+                        </div>
+
+                        <div class="form-group">
+                            <input class="inputtt" required="required" placeholder="Kaptan Örn: Mustafa Aziz" type="text" id="Kaptan" name="Kaptan" />
+                        </div>
+
+                        <div class="form-group">
+                           <input class="inputtt" required="required" placeholder="Bilet Fiyatı Örn: 40 (Para birimi ₺)" type="number" id="Bilet" name="Bilet" />
+                        </div><div class="form-group">
+                            <input class="inputtt" required="required" placeholder="Otobüs Örn:Mercedes Benz" type="text" id="Otobus" name="Otobus" />
+                        </div>
+                        <div>
+                            <div class="modal-body" style="color:black">
+                                <table class="show-cart table" style="font-size:16px">
+                                </table>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-success" style="font-size:17px;" onclick="VoyageAddorEdit()" name="AddorEditButton" id="AddorEditButton">Ekle</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal" style="font-size:17px;" onclick="Close()">Kapat</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function VoyageAddorEdit() {
+            var Route = $("#Guzergah").val();
+            var Date = $("#Tarih").val();
+            var Time = $("#Saat").val();
+            var Capacity = $("#Kapasite").val();
+            var TicketPrice = $("#Bilet").val();
+            var Plaqa = $("#Plaka").val();
+            var Captain = $("#Kaptan").val();
+            var Bus = $("#Otobus").val();
+            if (Route != "" && Date != "" && Time != "" && Capacity != "" && TicketPrice != "" && Plaqa != "" && Captain != "" && Bus != "") {
+                if ($("#AddorEditButton").text() == "Ekle") {
+                    $.ajax({
+                        url: '/Kobus/VoyageAdd',
+                        data: { Route: Route, Date: Date, Time: Time, Capacity: Capacity, TicketPrice: TicketPrice, Plaqa: Plaqa, Captain: Captain, Bus: Bus },
+                        type: 'POST',
+                        success: function () {
+                            alert("Sefer Eklenmiştir");
+                            window.location.reload();
+                        }
+                    });
+                }
+                else {
+                    $.ajax({
+                        url: '/Kobus/VoyageEdit',
+                        data: { Route: Route, Date: Date, Time: Time, Capacity: Capacity, TicketPrice: TicketPrice, Plaqa: Plaqa, Captain: Captain, Bus: Bus },
+                        type: 'POST',
+                        success: function () {
+                            alert("Sefer Düzenlenmiştir");
+                            window.location.reload();
+                        }
+                    });
+                }
+            }
+            else {
+                alert("Lütfen boşlukları doldurun.");
+            }
+
+        }
+        function Edit(data) {
+            $.ajax({
+                url: '/Kobus/VoyageEditData/',
+                data: { data: data },
+                type: 'POST',
+                success: function (List) {
+                    $("#Guzergah").val(List.Route);
+                    $("#Tarih").val(List.Date);
+                    $("#Saat").val(List.Time);
+                    $("#Kapasite").val(List.Capacity);
+                    $("#Bilet").val(List.TicketPrice);
+                    $("#Plaka").val(List.Plaqa);
+                    $("#Kaptan").val(List.Captain);
+                    $("#Otobus").val(List.Bus);
+                    $("#AddorEditButton").text("Düzenle");
+                }
+            });
+        }
+        function Delete(data) {
+            if (confirm("Seferi İptal Etmek İstediğinize Emin misiniz?")) {
+                $.ajax({
+                    url: '/Kobus/VoyageDelete/',
+                    data: { data: data },
+                    type: 'POST',
+                    success: function (data) {
+                        alert(data);
+                        if (data == "Silindi") {
+                            window.location.reload();
+                        }
+                    }
+                });
+            }
+        }
+        function Close() {
+            $("#Guzergah").val("");
+            $("#Tarih").val("");
+            $("#Saat").val("");
+            $("#Kapasite").val("");
+            $("#Bilet").val("");
+            $("#Plaka").val("");
+            $("#Kaptan").val("");
+            $("#Otobus").val("");
+            $("#AddorEditButton").text("Ekle");
+        }
+    </script>
+</div>

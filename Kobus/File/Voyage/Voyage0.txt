@@ -1,0 +1,1 @@
+SeferNo;Guzergah;Tarih;Saat;Yolcu/Kapasite;Bilet Fiyatı(TL);Plaka;Kaptan;Otobüs;Gelir;Doluluk;

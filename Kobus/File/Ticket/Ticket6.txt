@@ -1,0 +1,40 @@
+Null
+Rezervasyon;Halil Kara;Erkek;
+Rezervasyon;Barış Doğan;Erkek;
+Rezervasyon;Fatih Coşkun;Erkek;
+Null
+Null
+Null
+Null
+Satıldı;Atasagun Umar Kahveci;Erkek;
+Satıldı;Yunus Emre COŞKUN;Erkek;
+Satıldı;Kıvanç Aksoylu;Erkek;
+Satıldı;Atakan Çakırsoy;Erkek;
+Null
+Null
+Satıldı;Yunus Emre COŞKUN;Erkek;
+Satıldı;Zeynep;Erkek;
+Satıldı;zeynep;Kız;
+Satıldı;yunus;Kız;
+Null
+Null
+Null
+Null
+Null
+Null
+Null
+Null
+Rezervasyon;Ali Sarı;Erkek;
+Rezervasyon;Remzi Boztepe;Erkek;
+Null
+Null
+Null
+Null
+Rezervasyon;Akın Baltürk;Erkek;
+Rezervasyon;Yahya Gedik;Erkek;
+Null
+Null
+Null
+Null
+Rezervasyon;Muhammet Aykan;Erkek;
+Rezervasyon;Tarık Ersoylu;Erkek;

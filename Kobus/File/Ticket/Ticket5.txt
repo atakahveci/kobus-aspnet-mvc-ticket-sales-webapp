@@ -1,0 +1,36 @@
+Null
+Null
+Null
+Null
+Null
+Null
+Null
+Null
+Null
+Null
+Null
+Null
+Satıldı;Hakan Kiraz;Erkek;
+Satıldı;Hasan Kiraz;Erkek;
+Satıldı;Hüsamettin Kara;Erkek;
+Satıldı;Sami Kara;Erkek;
+Null
+Null
+Null
+Null
+Null
+Null
+Null
+Null
+Null
+Null
+Null
+Null
+Null
+Null
+Null
+Null
+Satıldı;Gamze Şenol;Erkek;
+Satıldı;Ozan Güven;Erkek;
+Satıldı;Enes Batur;Erkek;
+Satıldı;Ersin Yöney;Erkek;

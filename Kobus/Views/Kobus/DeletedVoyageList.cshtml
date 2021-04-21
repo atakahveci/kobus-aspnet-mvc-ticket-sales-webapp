@@ -1,0 +1,74 @@
+﻿@using Kobus.Entity;
+@using Kobus.Substructure;
+@using Kobus.Globals;
+@{
+    ViewBag.Title = "DeletedVoyageList";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<div class="normaltext">
+    <div class="hakdiv"
+         id="divhak"
+         style="display: block; margin: 0 auto; margin-top:15px; margin-bottom: 160px;">
+
+        <center>
+            <div class="CardDiv">
+                <div class="GreenTitleDiv">
+                    <h3 style=" float:left; margin-top: 1px; margin-left: 8px; padding-left: 6px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Silinen Sefer Listesi</h3>
+                </div>
+
+                <div class="row offset-2 custyle" style="padding:5px; margin:10px 10px 10px 0px; ">
+                    <table class="table table-striped custab" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:14px;  ">
+                        @{Entity entity = new Entity();
+                            DoubleDirectionalList Voyage = entity.VoyageList(0);
+                            Node temp = Voyage.top;
+
+                            <thead>
+                                <tr>
+                                    @while (temp != null)
+                                    {
+                                        <th>@temp.Data</th>
+                                        temp = temp.Next;
+                                    }
+                                </tr>
+                            </thead>
+
+
+                            for (int i = 1; i < Convert.ToInt32(Globals.Length); i++)
+                            {
+                                if (Globals.filecontrol[i] == "Null")
+                                {
+                                    Voyage = entity.VoyageList(i);
+                                    <tr>
+
+                                        @for (int j = 0; j < Voyage.Count(); j++)
+                                        {
+                                            <td>@Voyage.Data(j)</td>
+                                        }
+                                        <td>@Convert.ToInt32(entity.VoyageTotalBudget(@i) * Convert.ToInt32(Voyage.Data(5)))<span class="simge-tl">&#8378;</span> </td>
+                                        <td>@Voyage.Data(4) / @entity.VoyageTotalBudget(@i)</td>
+                                        <td class="text-center"><a class='btn btn-dark' style="font-size:14px; font-weight:500; font-family:'Segoe UI'" onclick="BackTo(@i)" data-toggle="modal" data-target="#cart"><span class="glyphicon glyphicon-edit"></span>Geri AL</a>
+                                    </tr>
+                                }
+                            }
+                        }
+                    </table>
+                </div>
+
+            </div>
+            <a class="btn btn-warning" style="font-size:14px;color:white; font-weight:500; font-family:'Segoe UI'" href="/Kobus/Sefer">Sefer Listesi</a>
+        </center>
+    </div>
+    <script type="text/javascript">
+        function BackTo(data) {
+            $.ajax({
+                url: '/Kobus/BackToDeletedVoyage',
+                data: { data: data },
+                type: 'POST',
+                success: function () {
+                    alert("Geri Alındı");
+                    window.location.reload();
+                }
+            });
+        }
+    </script>
+</div>

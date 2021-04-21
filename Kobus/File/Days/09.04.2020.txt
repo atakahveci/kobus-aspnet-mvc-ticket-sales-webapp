@@ -1,0 +1,9 @@
+----------------------------------------------------------------
+Sefer Bilgileri
+SeferNo->2;Guzergah->Hakkari;Tarih->09.04.2020;Saat->17:00;Kapasite->30;Bilet->40;Plaka->34 GIU 24;Kaptan->Serdar AZİZ;Otobüs->Honda;
+
+
+Koltuk Bilgileri
+Numara->Durum
+0->Boş;1->Boş;2->Boş;3->Boş;4->Boş;5->Boş;6->Boş;7->Boş;8->Boş;9->Boş;10->Boş;11->Boş;12->Boş;13->Boş;14->Boş;15->Boş;16->Boş;17->Boş;18->Boş;19->Boş;20->Boş;21->Boş;22->Boş;23->Boş;24->Boş;25->Boş;26->Boş;27->Boş;28->Boş;29->Boş;
+----------------------------------------------------------------

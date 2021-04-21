@@ -1,0 +1,1 @@
+3;Kocaeli->izmir;16.04.2020;14:00;32;35;64 fb 1907;Serdar Aziz;Fiat;

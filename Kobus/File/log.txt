@@ -1,0 +1,86 @@
+Tarih    Saat       - İşlem
+4/9/2020 1:59:05 AM - 1 Numaralı Sefer Düzenlenmiştir
+4/10/2020 1:43:11 AM - 2 Numaralı Seferin 5Numaralı KoltukSatıldıalındı
+4/10/2020 1:43:11 AM - 2 Numaralı Seferin 6Numaralı KoltukSatıldıalındı
+4/10/2020 1:47:18 AM - 2 Numaralı Seferin 7Numaralı KoltukSatıldıalındı
+4/10/2020 1:47:18 AM - 2 Numaralı Seferin 10Numaralı KoltukSatıldıalındı
+4/10/2020 1:47:18 AM - 2 Numaralı Seferin 0Numaralı KoltukSatıldıalındı
+4/10/2020 1:47:18 AM - 2 Numaralı Seferin 1Numaralı KoltukSatıldıalındı
+4/10/2020 1:47:18 AM - 2 Numaralı Seferin 2Numaralı KoltukSatıldıalındı
+4/10/2020 1:47:18 AM - 2 Numaralı Seferin 3Numaralı KoltukSatıldıalındı
+4/10/2020 1:47:18 AM - 2 Numaralı Seferin 4Numaralı KoltukSatıldıalındı
+4/10/2020 1:47:18 AM - 2 Numaralı Seferin 8Numaralı KoltukSatıldıalındı
+4/10/2020 1:47:18 AM - 2 Numaralı Seferin 9Numaralı KoltukSatıldıalındı
+4/10/2020 1:47:18 AM - 2 Numaralı Seferin 11Numaralı KoltukSatıldıalındı
+4/10/2020 1:47:18 AM - 2 Numaralı Seferin 15Numaralı KoltukSatıldıalındı
+4/10/2020 1:47:18 AM - 2 Numaralı Seferin 14Numaralı KoltukSatıldıalındı
+4/10/2020 1:47:18 AM - 2 Numaralı Seferin 13Numaralı KoltukSatıldıalındı
+4/10/2020 1:47:18 AM - 2 Numaralı Seferin 12Numaralı KoltukSatıldıalındı
+4/10/2020 1:47:18 AM - 2 Numaralı Seferin 16Numaralı KoltukSatıldıalındı
+4/10/2020 1:47:18 AM - 2 Numaralı Seferin 18Numaralı KoltukSatıldıalındı
+4/10/2020 1:47:18 AM - 2 Numaralı Seferin 19Numaralı KoltukSatıldıalındı
+4/10/2020 1:47:18 AM - 2 Numaralı Seferin 17Numaralı KoltukSatıldıalındı
+4/11/2020 1:47:18 AM - 2 Numaralı Seferin 21Numaralı KoltukSatıldıalındı
+4/11/2020 1:47:18 AM - 2 Numaralı Seferin 22Numaralı KoltukSatıldıalındı
+4/11/2020 1:47:18 AM - 2 Numaralı Seferin 23Numaralı KoltukSatıldıalındı
+4/11/2020 1:47:18 AM - 2 Numaralı Seferin 20Numaralı KoltukSatıldıalındı
+4/11/2020 1:47:18 AM - 2 Numaralı Seferin 24Numaralı KoltukSatıldıalındı
+4/11/2020 1:47:18 AM - 2 Numaralı Seferin 25Numaralı KoltukSatıldıalındı
+4/11/2020 1:47:18 AM - 2 Numaralı Seferin 26Numaralı KoltukSatıldıalındı
+4/11/2020 1:47:18 AM - 2 Numaralı Seferin 27Numaralı KoltukSatıldıalındı
+4/11/2020 1:52:23 AM - 1 Numaralı Bilet Satışı iptal edilmiştir.
+4/11/2020 3:46:45 AM - 2 Numaralı Sefer Geçmiş Seferlere Eklenmiştir
+11.04.2020 04:31:31 - 1 Numaralı Seferin 7Numaralı KoltukSatıldıalındı
+11.04.2020 04:31:48 - 2 Numaralı Sefer Geçmiş Seferlere Eklenmiştir
+11.04.2020 04:35:41 - 3 Numaralı Sefer Eklenmiştir
+11.04.2020 04:35:41 - SeferNo Numaralı Sefer gg.aa.yyyy.txt dosyasına eklenmiştir.
+11.04.2020 04:37:11 - 3 Numaralı Seferin 18Numaralı KoltukRezervasyonalındı
+11.04.2020 04:37:11 - 3 Numaralı Seferin 19Numaralı KoltukRezervasyonalındı
+11.04.2020 04:37:30 - 3 Numaralı Bilet Satışı iptal edilmiştir.
+11.04.2020 04:37:32 - 3 Numaralı Bilet Satışı iptal edilmiştir.
+12.04.2020 11:06:51 - 3 Numaralı Seferin 12Numaralı KoltukRezervasyonalındı
+12.04.2020 11:06:51 - 3 Numaralı Seferin 13Numaralı KoltukRezervasyonalındı
+12.04.2020 11:07:07 - 3 Numaralı Seferin 16Numaralı KoltukSatıldıalındı
+12.04.2020 11:07:07 - 3 Numaralı Seferin 17Numaralı KoltukSatıldıalındı
+4/28/2020 5:03:22 PM - 1 Numaralı Sefer Geçmiş Seferlere Eklenmiştir
+4/28/2020 5:03:22 PM - 3 Numaralı Sefer Geçmiş Seferlere Eklenmiştir
+5/1/2020 1:58:25 AM - 4 Numaralı Sefer Eklenmiştir
+5/1/2020 1:58:25 AM - SeferNo Numaralı Sefer gg.aa.yyyy.txt dosyasına eklenmiştir.
+5/1/2020 2:40:05 AM - 5 Numaralı Sefer Eklenmiştir
+5/1/2020 2:40:05 AM - SeferNo Numaralı Sefer gg.aa.yyyy.txt dosyasına eklenmiştir.
+5/1/2020 2:40:12 AM - 5 Numaralı Sefer Silinmiştir
+5/1/2020 2:42:08 AM - 5 Numaralı Silinen Sefer Geri Alınmıştır.
+5/1/2020 2:43:46 AM - 6 Numaralı Sefer Eklenmiştir
+5/1/2020 2:43:46 AM - SeferNo Numaralı Sefer gg.aa.yyyy.txt dosyasına eklenmiştir.
+5/1/2020 2:45:10 AM - 6 Numaralı Seferin 8Numaralı KoltukSatıldıalındı
+5/1/2020 2:45:10 AM - 6 Numaralı Seferin 9Numaralı KoltukSatıldıalındı
+5/1/2020 2:45:10 AM - 6 Numaralı Seferin 10Numaralı KoltukSatıldıalındı
+5/1/2020 2:45:10 AM - 6 Numaralı Seferin 11Numaralı KoltukSatıldıalındı
+5/1/2020 2:46:56 AM - 6 Numaralı Seferin 26Numaralı KoltukRezervasyonalındı
+5/1/2020 2:46:56 AM - 6 Numaralı Seferin 27Numaralı KoltukRezervasyonalındı
+5/1/2020 2:46:56 AM - 6 Numaralı Seferin 32Numaralı KoltukRezervasyonalındı
+5/1/2020 2:46:56 AM - 6 Numaralı Seferin 33Numaralı KoltukRezervasyonalındı
+5/1/2020 2:46:56 AM - 6 Numaralı Seferin 38Numaralı KoltukRezervasyonalındı
+5/1/2020 2:46:56 AM - 6 Numaralı Seferin 39Numaralı KoltukRezervasyonalındı
+5/1/2020 2:46:56 AM - 6 Numaralı Seferin 2Numaralı KoltukRezervasyonalındı
+5/1/2020 2:46:56 AM - 6 Numaralı Seferin 3Numaralı KoltukRezervasyonalındı
+5/1/2020 2:46:56 AM - 6 Numaralı Seferin 1Numaralı KoltukRezervasyonalındı
+5/1/2020 2:46:56 AM - 6 Numaralı Seferin 0Numaralı KoltukRezervasyonalındı
+5/1/2020 2:49:10 AM - 5 Numaralı Seferin 12Numaralı KoltukSatıldıalındı
+5/1/2020 2:49:10 AM - 5 Numaralı Seferin 13Numaralı KoltukSatıldıalındı
+5/1/2020 2:49:10 AM - 5 Numaralı Seferin 14Numaralı KoltukSatıldıalındı
+5/1/2020 2:49:10 AM - 5 Numaralı Seferin 15Numaralı KoltukSatıldıalındı
+5/1/2020 2:49:10 AM - 5 Numaralı Seferin 32Numaralı KoltukSatıldıalındı
+5/1/2020 2:49:10 AM - 5 Numaralı Seferin 33Numaralı KoltukSatıldıalındı
+5/1/2020 2:49:10 AM - 5 Numaralı Seferin 34Numaralı KoltukSatıldıalındı
+5/1/2020 2:49:10 AM - 5 Numaralı Seferin 35Numaralı KoltukSatıldıalındı
+5/1/2020 11:56:05 AM - 5 Numaralı Sefer Düzenlenmiştir
+5/1/2020 12:02:22 PM - 5 Numaralı Sefer Düzenlenmiştir
+5/1/2020 12:33:44 PM - 6 Numaralı Seferin 14Numaralı KoltukSatıldıalındı
+5/1/2020 12:33:44 PM - 6 Numaralı Seferin 15Numaralı KoltukSatıldıalındı
+5/1/2020 12:36:55 PM - 1 Numaralı Sefer Geçmiş Seferlere Eklenmiştir
+5/1/2020 12:36:55 PM - 2 Numaralı Sefer Geçmiş Seferlere Eklenmiştir
+5/1/2020 12:36:55 PM - 3 Numaralı Sefer Geçmiş Seferlere Eklenmiştir
+5/1/2020 12:43:58 PM - 6 Numaralı Seferin 16Numaralı KoltukSatıldıalındı
+5/1/2020 12:43:58 PM - 6 Numaralı Seferin 17Numaralı KoltukSatıldıalındı
+5/2/2020 1:45:51 AM - 5 Numaralı Sefer Geçmiş Seferlere Eklenmiştir

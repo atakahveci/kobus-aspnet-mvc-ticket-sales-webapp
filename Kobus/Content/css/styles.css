@@ -1,0 +1,726 @@
+/*styles.css sayfası*/
+/* Bazı tasarımların parçalarına buradan çalıştım..Kaynak Julio Codes-> https://www.youtube.com/watch?v=wlCPOwBr7no&list=WL&index=6&t=2493s */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.CardDiv {
+    background-color: #FFFFFF;
+    width: 1100px;
+    height: auto;
+    -webkit-box-shadow: 0px 0px 13px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 13px -6px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 13px -6px rgba(0,0,0,0.75);
+    margin-bottom:35px;
+    margin-top:5px;
+}
+
+.GreenTitleDiv {
+    width: 1100px;
+    height: 40px;
+    background-color: #5CB85C;
+    font-size: 14px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: #FFFFFF;
+}
+
+.inputt {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", sans-serif;
+    color: #FFFFFF;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    padding: 15px;
+    width: 100%;
+    margin: 20px 0;
+    background: rgba(124, 124, 124, 0);
+    border-bottom: solid;
+    border-color: #5CD375;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+.inputttt {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", sans-serif;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    width: 100%;
+    margin: 20px 0;
+    background: rgba(124, 124, 124, 0);
+    border-bottom: solid;
+    border-color: #FF9F1C;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+.inputtt {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", sans-serif;
+    color: #4A4A4A;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    padding: 15px;
+    width: 100%;
+    margin: 20px 0;
+    background: #F9F9F9;
+    border-bottom: solid;
+    border-color: #5CD375;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+.inputttd {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", sans-serif;
+    color: #4A4A4A;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    padding: 15px;
+    width: 60%;
+    margin: 20px 0;
+    background: #F9F9F9;
+    border-bottom: solid;
+    border-color: #5CD375;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  padding: 0.9rem;
+  font-size: 1.2rem;
+}
+#divon {
+  /*burası body gibi düşünüle bilir section'a verdiğim id yaptığı iş  flex flex wrap ve space ile her birini ekrana dağıtmış oluyor*/
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.div12 div {
+  /* burası portfolyo fotoğraflarının gösterildiği alan referans ve ilham olarak buradan aldım https://www.lisamicheleburns.com/alpine  */
+  width: 24vw;
+  height: 24vw;
+  margin: 0.5vw auto;
+}
+
+input {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", sans-serif;
+  color: #8e8e8e;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  width: 100%;
+  margin: 20px 0;
+  background: rgba(124, 124, 124, 0);
+  border-bottom: solid rgb(54, 54, 54);
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+
+textarea {
+  width: 100%;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", sans-serif;
+  color: #8e8e8e;
+  font-size: 1.8rem;
+  background-color: rgba(95, 95, 95, 0.336);
+  border: #f74337;
+  border-radius: 14px;
+}
+
+.video {
+  width: 450px;
+  height: 300px;
+}
+
+.hakdiv {
+    /* 300 tel için iyi*/
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 20px;
+    background-color: #F2F2F2;
+    width: 1400px;
+    padding: 35px;
+    border-radius: 0.9rem;
+}
+
+.content {
+  background: rgba(255, 255, 255, 0.041);
+  padding-top: 60px;
+  padding-right: 60px;
+  padding-bottom: 100px;
+  padding-left: 60px;
+  width: 45%;
+  height: 450px;
+  text-align: left;
+  position: relative;
+}
+
+.bg {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.212),
+      rgba(0, 0, 0, 0.212)
+    ),
+    url("/img/bg-img.jpg") center no-repeat;
+  background-size: cover;
+}
+.ortadiv {
+  width: 100%;
+  height: 200px;
+  padding: 90px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+html {
+  font-family: "Frank Ruehl CLM MediumOblique", Constantia, sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.FooterClass {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 25px;
+    padding-bottom: auto;
+    height: 85px;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    background-color: #272343;
+    color: rgb(95, 95, 95);
+    font-family: "Franklin Gothic Medium", "Arial Narrow", sans-serif;
+    font-size: 1em;
+}
+.containerr {
+  width: 100%;
+  max-width: 117rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.menu-icons {
+  color: #fdfdfd;
+  font-size: 4rem;
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 1500;
+  display: none;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  height: 8rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+} /* Header kısmındaki alt çizgi*/
+
+.logo {
+  display: flex;
+  border-radius: 100%;
+  margin-right: 5rem;
+} /*Logo için düzen margin right ile diğer menü parçalarından ayırıyoruz */
+.logo i {
+  margin: auto;
+  font-size: 3rem;
+  color: #fdfdfd;
+}
+
+.nav-listt {
+    font-family:Constantia,sans-serif;
+  justify-content:flex-end;
+  display:flex;
+  width: 100%; /*bu  menü uzunluğunu 100% yapar ve böylece tüm sayfaya yayılırlar*/
+  align-items: center; /* herşeyi ortaladı böylece logomuz tam ortalanmış oldu */
+}
+
+.nav-listt li {
+  line-height: 8rem;
+  position: relative;
+}
+
+.sub-menu li {
+  line-height: 4rem;
+}
+
+.nav-listt a {
+  display: block;
+  text-align:left;
+  float:left;
+  color: #fdfdfd;
+  padding: 0 1.5rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  transition: color 650ms;
+} /* Nav list üst header kısmındaki menümüz oluyor burada yazıların hepsini uppercase yaptık ve block olarak göstertiyoruz. transition ile 650ms sonra  geçiş yapıyor hover'a */
+
+    .nav-listt a:hover {
+        color: #5CD375; /* menüde  menü de olan seçeneklerdsen birinin üzerine gelince rengi değişiyor*/
+    }
+
+.btnn {
+    padding: 1.1rem;
+    display: inline-block; /*böylece ekran genişletikçe butonda genişlemeyecek ve değerini koruyacak*/
+    background-color: #1D2126;
+    border: 2px solid #5CD375;
+    border-radius: 0.9rem;
+    color: #FFFFFF;
+    transition: background-color 650ms;
+}
+    .btnn:hover {
+        color: #FFFFFF;
+        background-color: #272E36;
+        border: 2px solid #FFFFFF;
+    }
+
+.sub-menu {
+    width: 22rem;
+    display: block;
+    position: absolute;
+    border-top: 3px solid rgb(228, 73, 53);
+    background-color: #1D2126;
+    z-index: 100;
+    top: 16rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 605ms ease;
+}
+.sub-menu::before {
+  content: "";
+  position: absolute;
+  top: -2.5rem;
+  left: 3rem;
+  border: 1.2rem solid transparent; /* böylece alt menü için bir ok görünmüş oluyor eger burası yine turuncu olsaydı bir kare görünecekti bunun nedeni border eklememiz left ve top borderlar*/
+  border-bottom-color: rgb(228, 73, 53);
+}
+
+.nav-listt li:hover > .sub-menu {
+  top: 8rem;
+  opacity: 1;
+  visibility: visible; /* burada yaptığım şu oluyor .sub-menu sınıfında  oluşturmuş olduğum alt menü gizli ve görünebilirliği 0 dı burada hover ile üzerine gelince göstertmiş oluyorum visible ve opacity 1 ile. */
+}
+
+li.move-right {
+  margin: auto 0 auto auto; /* sağ üst köşeye sabitliyoruz*/
+  line-height: initial; /* bu varsayılan çizgi  yüksekliğini tanımlar yani form dışına çıkmaz böylece ekrandaki menü butonları veya başka şeyler*/
+}
+
+@media screen and (max-width: 915px) {
+  /*Responsive*/
+    .nav-listt {
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 50vh;
+        display: none; /*bunun amacı tuşa basıldıktan sonra açılması için olarak display none yani görünmüyor*/
+        flex-direction: column;
+        align-items: initial;
+        background-color: #272343;
+        z-index: 1000;
+        overflow-y: scroll;
+    }
+  /* Bu bölüm tammen responsiveleştirme bölümü... kıscası media screen vekullanarak ekran  yatay boyutu 915 pikseli geçtiği zaman aşağıdaki önceden normal boyutları 
+ ile ayarlanmış sınıflar içerisinde değişiklik yapmış oluyor yani küçük cihaz ekranına göre değiştirilmiş oluyor. */
+  .nav-listt > li {
+    line-height: 6rem;
+  }
+
+  .sub-menu {
+    position: initial;
+    border: 3px solid transparent;
+    border-left-color: #f74337;
+    margin-left: 1rem;
+    max-height: 0;
+  }
+  .sub-menu::before {
+    display: none;
+  }
+
+  .nav-listt li:hover > .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    max-height: initial;
+  }
+
+  li.move-right {
+    /*hizalıyor tuşları ve liste içerisindeki herşeyi*/
+    margin: 0 auto 0 0;
+    line-height: initial;
+  }
+  .menu-icons {
+    display: block;
+  }
+
+  .ion-md-close {
+    display: none;
+  }
+  /*Burası kısacası  js ile aktif olarak son basılmış icon'a göre değişiklik yapıyor örneğin menü açıldığında kapatma gözüksün veya menü yok iken menü tuşu olsun ancak kapatma olmasın gibi*/
+  nav.active .ion-md-close {
+    display: block;
+  }
+
+  nav.active .ion-md-menu {
+    display: none;
+  }
+    nav.active .nav-listt {
+       
+        display: flex;
+    }
+}
+/*sub menu icindeki sub*/
+
+/*Orta div sınıflandırma*/
+.Orta {
+  width: 100%;
+  height: 100vh;
+}
+
+.text {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FF9F1C;
+    text-align: center;
+    font-family: "Frank Ruehl CLM MediumOblique", Constantia, sans-serif;
+}
+
+    .text h1 {
+        letter-spacing: 5px;
+        font-size: 8rem;
+        margin: 2rem 0;
+        font-family: "Frank Ruehl CLM MediumOblique", Constantia, sans-serif;
+    }
+
+    .text h2 {
+        font-family: "Frank Ruehl CLM MediumOblique", Constantia, sans-serif;
+        color: #191919;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+    }
+
+    .text p {
+        font-family: "Frank Ruehl CLM MediumOblique", Constantia, sans-serif;
+        color: #191919;
+        font-size: 1.6rem;
+        margin-bottom: 5rem;
+    }
+
+.text .btnn {
+  font-size: 1.6rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  color: #fdfdfd;
+  text-transform: uppercase;
+}
+.normaltext {
+    width: 100%;
+    color: #FF9F1C;
+    text-align: center;
+    font-family: "Frank Ruehl CLM MediumOblique", Constantia, sans-serif;
+}
+
+    .normaltext h1 {
+        letter-spacing: 5px;
+        font-size: 8rem;
+        margin: 2rem 0;
+        font-family: "Frank Ruehl CLM MediumOblique", Constantia, sans-serif;
+    }
+
+    .normaltext h2 {
+        font-family: "Frank Ruehl CLM MediumOblique", Constantia, sans-serif;
+        color: #191919;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+    }
+
+    .normaltext p {
+        font-family: Constantia;
+        color: #191919;
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+    }
+
+.normaltext .btnn {
+  font-size: 1.6rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1350px) {
+  #divon {
+    display: block;
+  }
+  .div12 div {
+    width: 50vw;
+    height: 50vw;
+    margin: 0.9vw auto;
+  }
+  .btnn {
+    padding: 1rem;
+    display: inline-block; /*böylece ekran genişletikçe butonda genişlemeyecek ve değerini koruyacak*/
+  }
+  .normaltext .btnn {
+    font-size: 1.4rem;
+    padding-left: 2.2rem;
+    padding-right: 2.2rem;
+  }
+}
+
+@media screen and (max-width: 915px) {
+  /*ekran 915 piksel daha küçük olunca ekrandaki textlerin boyutları*/
+  .text h1 {
+    font-size: 4rem;
+  }
+
+  .text h2 {
+    font-size: 1.3rem;
+  }
+
+  .text p {
+    font-size: 1.1rem;
+  }
+
+  .text .btnn {
+    font-size: 1.2rem;
+  }
+  .normaltext h1 {
+    font-size: 4rem;
+  }
+
+  .normaltext h2 {
+    font-size: 1.3rem;
+  }
+
+  .normaltext p {
+    font-size: 1.2rem;
+  }
+  .normaltext .btnn {
+    font-size: 1.2rem;
+  }
+  .nav-listt a {
+    font-size: 1.1rem;
+  }
+  .btnn {
+    padding: 0.8rem;
+    
+  }
+  .FooterClass h3 {
+    font-size: 0.9em;
+  }
+
+  .hakdiv {
+    width: 500px;
+    padding: 20px;
+  }
+
+  input {
+    font-size: 1.4rem;
+  }
+
+  textarea {
+    font-size: 1.4rem;
+  }
+  #myBtn {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+  .div12 div {
+    width: 55vw;
+    height: 55vw;
+  }
+  .video {
+    width: 430px;
+    height: 255px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .div12 div {
+    width: 70vw;
+    height: 70vw;
+    margin: 1.8vw auto;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  /* Telefonlarda oluşturduğum content cardı düzgün görünmesi için*/
+  .content {
+    padding-top: 60px;
+    padding-right: 60px;
+    padding-bottom: 100px;
+    padding-left: 60px;
+    width: 100%;
+    height: 350px;
+    text-align: left;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 555px) {
+  /*400 pikselden küçük ekranlarda düzgün görünmsei için örneğin iphone 5 veya 4 ile 4.5 inch arası cihazlar. veya iphone 6*/
+  .text p {
+    font-size: 1.1rem;
+    margin-left: 13%;
+  }
+  .normaltext p {
+    font-size: 1.1rem;
+    margin-left: 13%;
+  }
+  .normaltext h1 {
+    font-size: 3rem;
+  }
+  .text h1 {
+    font-size: 3rem;
+  }
+  .normaltext h2 {
+    font-size: 1rem;
+  }
+  .text h2 {
+    font-size: 1rem;
+  }
+  .hakdiv {
+    width: 480px;
+    padding: 20px;
+  }
+  .hakdiv p {
+    margin-left: 1px;
+  }
+  input {
+    font-size: 1.3rem;
+  }
+  textarea {
+    font-size: 1.3rem;
+  }
+  .div12 div {
+    width: 79vw;
+    height: 79vw;
+    margin: 2vw auto;
+  }
+
+  .video {
+    width: 425px;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .hakdiv {
+    width: 410px;
+    padding: 20px;
+  }
+  .btnn {
+    padding: 0.9rem;
+  }
+  .normaltext .btnn {
+    font-size: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .video {
+    width: 375px;
+    height: 210px;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  .hakdiv {
+    width: 360px;
+    padding: 20px;
+  }
+  .hakdiv p {
+    font-size: 1.05rem;
+  }
+  .div12 div {
+    width: 84vw;
+    height: 84vw;
+    margin: 2.5vw auto;
+  }
+  .video {
+    width: 330px;
+    height: 180px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  /*400 pikselden küçük ekranlarda düzgün görünmsei için örneğin iphone 5 veya 4 ile 4.5 inch arası cihazlar. veya iphone 6*/
+  .text h1 {
+    font-size: 2.5rem;
+  }
+  .normaltext h1 {
+    font-size: 2.5rem;
+  }
+  .FooterClass h3 {
+    font-size: 0.8em;
+  }
+  .div12 div {
+    width: 89vw;
+    height: 89vw;
+    margin: 3vw auto;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .hakdiv {
+    width: 300px;
+    padding: 20px;
+  }
+  .hakdiv p {
+    font-size: 1rem;
+  }
+  .video {
+    width: 300px;
+    height: 180px;
+  }
+}
+
+@media screen and (min-height: 568px) {
+  .bg {
+    height: 108vh;
+  }
+}
+@media screen and (min-height: 705px) {
+  .bg {
+    height: 100vh;
+  }
+}

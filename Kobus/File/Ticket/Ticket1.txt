@@ -1,0 +1,40 @@
+Satıldı;Atasagun Kahveci;Erkek;
+Satıldı;Alihan Sarı;Erkek;
+Satıldı;Muhammet Aykan;Erkek;
+Satıldı;Remzi Boztepe;Erkek;
+Satıldı;Barış Doğan;Erkek;
+Satıldı;Burak Yılmaz;Erkek;
+Satıldı;Yahya Gedik;Erkek;
+Satıldı;Gizem AYDOĞAN;Kız;
+Satıldı;Akın Baltürk;Erkek;
+Satıldı;Ata Demirel;Erkek;
+Satıldı;Murat ERDİ;Erkek;
+Satıldı;Mustafa Üstündağ;Erkek;
+Satıldı;Mahmut Tekdemir;Erkek;
+Satıldı;Nihat KURT;Erkek;
+Satıldı;Nurhan KURT;Erkek;
+Satıldı;Halil Coşkun;Erkek;
+Satıldı;İbrahim Erdoğan;Erkek;
+Satıldı;Ata KARA;Erkek;
+Satıldı;Kübra Kaya;Kız;
+Satıldı;Atasagun Kahveci;Erkek;
+Satıldı;Büşra Güzel;Kız;
+Satıldı;Mehmet KAYA;Erkek;
+Satıldı;Musa EROL;Erkek;
+Satıldı;Nezzat Kaya;Erkek;
+Satıldı;Mümtaz Kirazlı;Erkek;
+Satıldı;Korkut KARA;Erkek;
+Satıldı;Atasagun Kahveci;Erkek;
+Satıldı;Ezgi Kaya;Kız;
+Satıldı;Ecem Yıldız;Kız;
+Satıldı;Atasagun Kahveci;Erkek;
+Satıldı;Emine KARAKAYA;Kız;
+Satıldı;Fatih KAYA;Erkek;
+Null
+Null
+Null
+Null
+Null
+Null
+Null
+Null

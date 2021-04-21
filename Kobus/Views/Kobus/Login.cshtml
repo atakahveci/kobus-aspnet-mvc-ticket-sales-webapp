@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/LoginLayout.cshtml";
+}
+
+<script>
+            function Giris() {
+                var id = document.getElementById("Yonetici").value;
+                var sifre = document.getElementById("Yoneticisifre").value;
+
+                if (id == "admin" && sifre == "admin") {
+                   window.open('@Url.Action("Sefer", "Kobus")');
+            }
+        }
+</script>
+
+<div class="container" style="margin-top:100px">
+    <div class="row">
+
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-signin my-5">
+                <div class="card-body">
+                    <h1 style="text-align:center">
+                        <img src="~/img/hosgeldin.png" style="width:150px; height:105px" alt="">
+
+                    </h1>
+                    <h5 style="text-align:center;color:white; font-size:14px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Yönetici Olarak Devam Etmek İçin Giriş Yapın</h5>
+                    @ViewBag.Mesaj
+                    @using (Html.BeginForm("Login", "Kobus", FormMethod.Post))
+                    {
+                        <form class="form-signin">
+                            <div class="form-label-group" style="color:white; font-size:15px">
+                                <input type="text" id="Yonetici" name="lname" placeholder="Id" required class="inputt">
+                            </div>
+                            <div class="form-label-group" style="color:white; font-size:15px">
+                                <input type="password" id="Yoneticisifre" name="lname" placeholder="Şifre" required class="inputt">
+                            </div>
+                            <div>
+                                <p> </p>
+                            </div>
+                            <button type="submit" onclick="Giris()" class="btnn" style="width:100%; text-align:center; background-color:#5CD375;color:white;">Giriş Yap</button>
+                            <hr class="my-4">
+                        </form>
+
+                    }
+                    <p style="text-align:center; color:white;font-size:10px; font-family:'Segoe UI'">Giriş yaparak otomasyon Gizlilik Politikası’nı okuduğunuzu ve kabul ettiğinizi onaylıyorsunuz.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

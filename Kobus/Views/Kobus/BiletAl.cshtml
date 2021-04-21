@@ -1,0 +1,250 @@
+﻿@using Kobus.Entity;
+@using Kobus.Substructure;
+@using Kobus.Globals;
+@{
+    ViewBag.Title = "BiletAl";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<div class="normaltext">
+    <div class="hakdiv"
+         id="divhak"
+         style="display: block; margin: 0 auto; margin-top:15px; margin-bottom: 160px;">
+
+        <br />
+        <br />
+        <center>
+            <div class="CardDiv" id="displaydiv">
+                <div class="GreenTitleDiv">
+                    <h3 style=" float:left; margin-top: 1px; margin-left: 8px; padding-left: 6px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Seçilmiş Sefer &#10142; Bilet Satışı: Koltuk Seçimi</h3>
+                </div>
+
+                <div class="containerbus">
+                    <div style="padding:15px 1px 15px 1px; height:auto; float:left; margin-right:190px">
+                        <p style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:13px; font-weight:400; color:#717171; text-align:left;">
+                            Seçmiş olduğunuz sefer otobüsünden bir koltuk seçerek bilet satışı veya rezarvasyonu yapabilirsiniz.
+                        </p> <br />
+                        <p style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight:400; font-size:13px; color:#717171; text-align:left;">
+                            Koltuklardan boş olana tıklayıp daha sonra açılacak modal ekrana kişinin bilgilerini doğru bir şekilde giriniz.
+                        </p>
+                        <br /><br />
+                        <p style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight:400; font-size:13px; color:#717171; text-align:left;">
+                            Sağ tarafta görmüş olduğunuz otobüs koltukları 3 renge sahip olabilir bunlar Yeşil - Seçilmiş, Siyah - Dolu ve beyaz ise boş olduğunu gösterir.
+                        </p>
+                        <div style="float:right">
+
+                            <div class="Seat" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight:400; font-size:13px; color:#717171;display:inline-block; ">
+                                <input type="checkbox" value="None" name="check" style="" /> <label></label>
+                            </div>
+                           
+                            <div class="Seat" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight:400; font-size:13px; color:#717171;display:inline-block; ">
+                                <input type="checkbox" value="None" name="check" style="background-color:black" /> <label style="background-color:black"></label>
+                            </div>
+                          
+                            <div class="Seat" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight:400; font-size:13px; color:#717171;display:inline-block;">
+                                <input type="checkbox" value="None" name="check" style="" /> <label style="background-color:#00bf00"></label>
+                            </div>
+                        </div>
+
+                        <br />
+                        <div style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight:400; font-size:19px; color:#5CB85C; text-align:left;">
+                            <table id="SecilenKoltuklar">
+                                <tr><th >Seçilen Koltuklar</th></tr>
+                            </table>
+                            <br />
+                            <button onclick="Buy()" data-toggle="modal" data-target="#cart1" class="btn btn-success" style="float:left; font-family:'Segoe UI'; padding:4px 14px 4px 14px; font-size:14px; font-weight:500;  "> İşlemi Tamamla</button>
+                        </div>
+                        <br />
+                    </div>
+                    <div class="autobus" id="autobus">
+                        @for (int i = 0; i < Globals.Capacity.Length / 4; i++)
+                        {
+                            int n = i * 4;
+                            <div class="fila">
+                                @for (int k = 0; k < 4; k = k + 2)
+                                {
+
+                                    <div class="SeatArea">
+                                        @for (int j = 0; j < 2; j++)
+                                        {
+                                            if (Globals.Capacity[n + j + k] == "Null")
+                                            {
+                                                <div class="Seat">
+                                                    <input type="checkbox" value="@(n+j+k)" id="Seat@(n+j+k)" name="check" onclick="Seat(@(n+j+k))" />
+                                                    <label for="Seat@(n+j+k)">@(n + j + k)</label>
+                                                </div>
+                                            }
+                                            else
+                                            {
+                                                <div class="Seat">
+                                                    <input type="checkbox" id="Seat@(n+j+k)" name="check" disabled />
+                                                    <label for="Seat@(n+j+k)" style="background-color:black"></label>
+                                                </div>
+                                            }
+                                        }
+                                    </div>
+                                }
+                            </div>
+                        }
+                        <br />
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </center>
+
+        <center>
+            <div class="CardDiv">
+                <div class="GreenTitleDiv">
+                    <h3 style=" float:left; margin-top: 1px; margin-left: 8px; padding-left: 6px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Bilet İşlemleri &#10142; Koltuk Listeleme: Bilet İptal Etme</h3>
+                </div>
+
+                <div class="row offset-2 custyle" style="padding:5px; margin:10px 10px 10px 0px; ">
+                    <table class="table table-striped custab" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:14px;  ">
+                        <thead style="padding-left:90px; padding-right:90px; ">
+                            <tr style="padding-left:90px; padding-right:90px; ">
+                                <th>KOLTUK NUMARASI</th>
+                                <th>DURUM</th>
+                                <th>Ad-Soyad</th>
+                                <th>Cinsiyet</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        @{for (int i = 0; i < Globals.Capacity.Length; i++)
+                            {
+                                Entity entity = new Entity();
+                                DoubleDirectionalList Ticket = entity.TicketList(i);
+                                <tr>
+                                    <td>@i</td>
+                                    @for (int j = 0; j < Ticket.Count(); j++)
+                                    {
+                                        <td>@Ticket.Data(j).ToString()</td>
+                                    }
+                                    @if (Ticket.Data(0).ToString() == "Null")
+                                    {
+                                        <td class="text-center" style="float:right;">
+                                            <a class="btn btn-dark" style="font-size:14px;color:white; font-weight:500 "><span class="glyphicon glyphicon-remove"></span>Bileti İptal Et</a>
+                                        </td>
+                                    }
+                                    else
+                                    {
+                                        <td class="text-center" style="float:right;">
+                                            <a class="btn btn-danger" style="font-size:14px;color:white; font-weight:500 " onclick="TicketClose(@i)"><span class="glyphicon glyphicon-remove"></span>Bileti İptal Et</a>
+                                        </td>
+                                    }
+                                </tr>
+                            }
+                        }
+                    </table>
+                </div>
+            </div>
+        </center>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="cart1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="width:300px;font-size:18px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:#5CD375 ;">Bilet Satın Al</h5>
+
+                    <div style="color:#4A4A4A; width:1000px; padding:20px 110px 10px 5px;font-size:17px; ">
+                        <div class="form-group" id="ticketlist">
+
+                        </div>
+                        <div>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            </button>
+                            <div class="modal-body" style="color:black">
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-success" style="font-size:17px;" onclick="ICanBuy()">Satın Al</button>
+                                    <button type="button" class="btn btn-dark" style="font-size:17px;" onclick="ICanRezerve()">Rezervasyon Yap</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal" style="font-size:17px;" onclick="Close()">İptal</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var koltukboyutu = 0;
+        function Seat(data) {
+            var checkid = "Seat" + data;
+            var checkbox = document.getElementById(checkid);
+            if (checkbox.checked == true) {
+                $("#SecilenKoltuklar").append('<tr style="font-size:17px; display:inline-block; margin-right:10px; margin-top:10px; font-weight:600; color:#ffffff; background-color:#5CB85C; padding:5px; border-radius: 8px;" id =' + data + '><td>' + data + '</td></tr>  ');
+                koltukboyutu = koltukboyutu + 1;
+            }
+            else {
+                $("tr#" + data).remove();
+                koltukboyutu = koltukboyutu - 1;
+            }
+        }
+        function Buy() {
+            var i = 0;
+            $('#SecilenKoltuklar td').each(function () {
+                $("#ticketlist").append('<div id="biletlistesi" style="text-align:left;"></div>');
+                $("#biletlistesi").append('<span style="font-weight:400; font-size:19px; color:#5CB85C; text-align:left; font-family:Segoe UI;">Koltuk Numarası</span><input class="inputtt" style="margin-bottom:4px; margin-top:1px" required="required" type="text" disabled="enabled" id="koltuknumarasi' + i + '" name="MusteriAdi" value="' + ($(this).html()) + '">');
+                $("#biletlistesi").append('<input class="inputtt" required="required" style="margin-top:2px; margin-bottom:8px" placeholder="MüşteriAdı Örn: Yunus Emre COŞKUN" type="text" id="MusteriAdi' + i + '" name="MusteriAdi" />');
+                $("#biletlistesi").append('<span style="font-weight:400; font-size:19px;  color:#5CB85C; text-align:left; font-family:Segoe UI;">Cinsiyet </span> <select class="inputtt" style="margin-bottom:20px; margin-top:1px"  id="Cinsiyet"><option value="Erkek">Erkek</option><option value="Kız">Kız</option></select>  <hr> <br>');
+                i = i + 1;
+            });
+        }
+        function Close() {
+            $("div#biletlistesi").remove();
+        }
+        function ICanBuy() {
+            var i;
+            var koltuknumarasi = [];
+            var adsoyad = [];
+            var cinsiyet = [];
+            for (i = 0; i < koltukboyutu; i++) {
+                koltuknumarasi[i] = $("#koltuknumarasi" + i).val();
+                adsoyad[i] = $("#MusteriAdi" + i).val();
+                cinsiyet[i] = $("#Cinsiyet").val();
+                durum = "Satıldı";
+            }
+            $.ajax({
+                url: '/Kobus/TicketBuy/',
+                data: { koltuknumarasi: koltuknumarasi, adsoyad: adsoyad, cinsiyet: cinsiyet, durum: durum },
+                type: 'POST',
+                success: function () {
+                    alert("Bilet Satıldı");
+                    window.location.reload();
+                }
+            });
+        }
+        function ICanRezerve() {
+            var i;
+            var koltuknumarasi = [];
+            var adsoyad = [];
+            var cinsiyet = [];
+            for (i = 0; i < koltukboyutu; i++) {
+                koltuknumarasi[i] = $("#koltuknumarasi" + i).val();
+                adsoyad[i] = $("#MusteriAdi" + i).val();
+                cinsiyet[i] = $("#Cinsiyet").val();
+                durum = "Rezervasyon";
+            }
+            $.ajax({
+                url: '/Kobus/TicketBuy/',
+                data: { koltuknumarasi: koltuknumarasi, adsoyad: adsoyad, cinsiyet: cinsiyet, durum: durum },
+                type: 'POST',
+                success: function () {
+                    alert("Rezervasyon Yapıldı");
+                    window.location.reload();
+                }
+            });
+        }
+        function TicketClose(data) {
+            $.ajax({
+                url: '/Kobus/TicketClose/',
+                data: { data: data },
+                type: 'POST',
+                success: function () {
+                    alert("Bilet İptal Edildi");
+                    window.location.reload();
+                }
+            })
+        }
+    </script>
+</div>

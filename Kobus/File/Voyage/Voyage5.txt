@@ -1,0 +1,1 @@
+5;Kocaeli->İstanbul;01.05.2020;16:00;32;40;34 PLU 24;Mustafa Aziz;Mercedes Benz;
